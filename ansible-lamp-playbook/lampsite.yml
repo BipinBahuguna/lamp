@@ -1,0 +1,13 @@
+---
+#
+# Playbook to install the ELK stack + Beats
+#
+- hosts: webserver 
+  remote_user: devop
+  become: yes
+  become_user: root
+  roles:
+  - { role:  apache2 }
+  - { role:  Mysql }
+  - { role:  php-5-6 }
+  - { role:  zendguard }

@@ -1,0 +1,26 @@
+---
+
+ - name: Install the MySQL packages
+   apt: name={{ item }} state=present update_cache=yes
+   with_items:
+     - build-essential
+     - python-dev
+     - python-mysqldb
+     - python3-pip
+   tags: mission
+   
+ - name: Install the MySQL packages
+   apt: name={{ item }} state=present update_cache=yes
+   with_items:
+     - mysql-server
+     - mysql-client
+     - python-mysqldb
+     - libmysqlclient-dev
+   tags: mysql
+
+ - name: bind mysql remote address
+   ini_file: dest=/etc/mysql/mysql.conf.d/mysqld.cnf
+       section=mysqld
+       option=bind-address
+       value='127.0.0.1'
+   tags: mysql

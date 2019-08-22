@@ -1,0 +1,12 @@
+ Webserver: 192.168.56.105  
+ stage: "test"
+ subdomain: "test"
+
+ innodb_buffer_pool_size: "1G"
+ innodb_buffer_pool_instances: "2"
+ innodb_thread_concurrency: "4"
+
+ route:
+      - {database: "testdb", databaseserver: "Webserver", databaseuser: "root", databasepass: "root123"}
+      - {database: "devtdb", databaseserver: "Webserver", databaseuser: "root", databasepass: "root123"}
+     
