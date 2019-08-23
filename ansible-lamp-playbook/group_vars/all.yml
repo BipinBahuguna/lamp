@@ -1,6 +1,7 @@
  
 mysql_user: devop
 mysql_devop_pass: Devop12!
+mysql_user_database: testdb
 
 
 mysql_rootuser: root
