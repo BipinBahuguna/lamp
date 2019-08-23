@@ -3,5 +3,5 @@ mysql_user: devop
 mysql_devop_pass: Devop12!
 
 
-mysql_rootuser: root
-mysql_password: root123
+mysql_root_user: root
+mysql_root_password: root123
